@@ -22,4 +22,5 @@ client.once('ready', () => {
 	console.log('Ready!');
 });
 
+
 client.login(token);
