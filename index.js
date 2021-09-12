@@ -1,7 +1,6 @@
 const { Client, Intents } = require('discord.js');
 const { token } = require('./config.json');
 
-
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 client.on('interactionCreate', async interaction => {
@@ -18,8 +17,10 @@ client.on('interactionCreate', async interaction => {
 	}
 });
 
+
 client.once('ready', () => {
 	console.log('Ready!');
 });
+
 
 client.login(token);
