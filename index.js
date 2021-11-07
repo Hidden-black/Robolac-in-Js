@@ -12,14 +12,7 @@ client.on('message', message => {
     }
 });
 
-// make a meme command useing the reddit api and get memes from r/memes
-client.on('message', message => {
-    if (message.content === ',meme') {
-        const { body } = await request.get('https://www.reddit.com/r/memes/top.json?sort=top&t=day');
-        const meme = body.data.children[Math.floor(Math.random() * body.data.children.length)].data.url;
-        message.channel.send(meme);
-    }
-});
+// make a meme command useing the reddit api
 
 
 // When the client is ready, run this code (only once)
